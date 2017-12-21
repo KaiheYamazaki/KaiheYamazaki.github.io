@@ -1,4 +1,4 @@
-Released in September 1 2017, written by Kaihe Yamazaki.
+Released on September 1 2017, written by Kaihe Yamazaki.
 
 English: https://kaiheyamazaki.github.io/index.html
 Japanese: https://kaiheyamazaki.github.io/index_.html
