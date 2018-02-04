@@ -1,0 +1,29 @@
+### atom package manager
+apm stars --install
+
+
+### load environment
+conda env create --file base.yaml
+conda env create --file py27.yaml
+
+
+### package for base env
+conda install bokeh plotly netCDF4 xarray
+conda install -c conda-forge basemap basemap-data-hires
+conda install -c conda-forge seawater gsw
+conda install -c conda-forge geopandas
+conda install -c conda-forge cmocean
+
+
+### create py27 and 3D-plot(pyqtgraph) environment
+conda create --name py27 python=2.7
+activate py27
+conda install scipy ipykernel pyqtgraph pyside pyopengl
+python -m ipykernel install --user --name py27 # for Hydrogen
+
+# NOTE: for Atom Hydrogen, you should start Atom from the command prompt AFTER activate the env.
+
+
+### save environment
+conda env export > base.yaml
+(py27) conda env export > py27.yaml
