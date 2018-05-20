@@ -78,8 +78,16 @@
 							 <u>気象と海洋の研究にPythonを使いましょう</u>！<br />
  							 Matlabユーザーなら乗り換えは楽かと思います... (
 							 <a href="https://cheatsheets.quantecon.org/">比較</a>
-							 と <a href="http://www.scipy-lectures.org/intro/intro.html">その理由</a>)<br />
-							 おすすめパッケージ: Basemap, xarray, geopandas, plotly, pyqtqraph.<br />
+							 と <a href="http://www.scipy-lectures.org/intro/intro.html">その理由</a>)<br /><br />
+							 [環境構築のメモ]<br />
+							 初めにAnaconda3をインストールします。あとは好きなエディターを選ぶだけ。<br />
+							 emacsやvimではなく、IDEであるPyCharmやAtomを推奨してます。SpyderはAnacondaに付属してるIDEです。<br />
+							 Pythonはパッケージを組み合わせで出来ている言語です。<br />
+							 海洋・気候の研究で有用なのは、<br />
+							 Basemap（マッピング）, xarray（netcdfのIO）, gsw（海水の状態方程式）, geopandas（座標系変換）, cmocean（カラーバー）<br />
+							 などです。<br />
+							 パッケージは、端末上で"conda install [パッケージ名]"として入れますが、上記のパッケージでは、"conda install -c conda-forge [パッケージ名]"とします。<br />
+							 ちなみに、Anacondaは"conda env"コマンドで、複数のパッケージ環境を共存させることができます。（e.g. Python2系と3系）<br />
 							</font>
 							</p>
 							<img src="about/AtomExample.gif" alt="" width="60%" height="60%"/>
