@@ -1,0 +1,25 @@
+#orcid-widget-js h1, #orcid-widget-js h2 {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+#orcid-widget-js div.orcid-profile {
+    margin: 5px 0 5px 0;
+}
+
+#orcid-widget-js .orcid-profile .orcid-works {
+}
+#orcid-widget-js .orcid-uri {
+    margin: 4px 2px 20px 0px;
+    display: block;
+    text-align: right;
+}
+#orcid-widget-js span.orcid-works {
+    margin-left: 5px;
+}
+.exp1 {
+	font-weight: bold;
+	color: red;
+}
+ .orcid-work_odd {
+    background-color: #eee;
+}
