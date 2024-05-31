@@ -23,12 +23,20 @@
 	</head>
 	<body class="is-preload">
 
+        <style>
+            .responsive-img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-					<h1><font><strong>Hi, I'm Kaihe Yamazaki</strong></font></h1>
-					<h1>a physical oceanographer.</h1>
+                    <h1><font><strong>Kaihe Yamazaki</strong></font></h1>
+					<h1>Physical Oceanographer</h1>
+                    <h0>Southern Ocean enthusiast</h0></br>
 					
 					</br>EN/<a href="./index_jp.html">JP</a>
 
@@ -40,23 +48,54 @@
 		<!-- Main -->
 			<div id="main">
 				<!-- One -->
-					<section id="one">
-						<h2><font color="#135C89">Antarctic ice melt - It possesses 70% of Earth's freshwater and 90% of its ice.</font></h2>
-						<div class="row">
-                            <p>The melting of Antarctic ice has been caused by warming ocean waters. Oceanic heat, particularly Circumpolar Deep Water, flow underneath the ice shelves, melting the ice shelves that surround Antarctica from below. As global temperatures rise, the oceans absorb more heat, also leading to the melting of them. This causes the ice to thin and break up, allowing glaciers to flow more quickly into the ocean.</p>
+                <section id="one">
+                    <h1><font color="#135C89">Antarctic ice melt ー it possesses 70% of Earth's freshwater and 90% of the gross ice</font></h1>
+                    <div class="row">
+                        <p>The melting of Antarctic ice has been caused by warming ocean waters. Oceanic heat, particularly Circumpolar Deep Water, flows underneath the ice shelves, melting the ice shelves that surround Antarctica from below. As global temperatures rise, the oceans absorb more heat, also leading to the melting of the ice. This causes the ice to thin and break up, allowing glaciers to flow more quickly into the ocean.</p>
+                
+                        <img src="images/more/AntIce.jpg" class="responsive-img">
+                        <p>Silvano et al. (2023, Frontiers in Marine Science)</p>
+                
+                        <p>In addition to oceanic heat, other factors such as changing atmospheric circulation and sea ice can also contribute to the melting of Antarctic ice. Stronger winds can drift sea ice away from the coast, exposing ice shelves to warmer waters. Warmer air temperatures can also lead to increased melting of the ice at the surface.</p>
+                
+                        <video class="responsive-img" controls>
+                            <source src="images/movie/grace_monthly_anomaly_ais_black_v2_720p4.mp4" type="video/mp4">
+                        </video>
+                        <p>NASA</p>
+                
+                        <p>The melting of Antarctic ice is a major concern for scientists and policymakers due to its potential impact on global sea level rise and marine ecosystems. In the upcoming centuries, sea levels could rise by several meters, which would have catastrophic consequences for low-lying areas and coastal cities around the world. Current predictions of future sea-level rise include errors of several meters related to the melting process of the Antarctic ice sheet, and more accurate predictions are being discussed as a societal demand.</p>
+                
+                        <p>We are working to predict future rates of ice melt with more accuracy and evaluate potential impacts on global sea level rise, ocean overturning circulation, and marine ecosystems.</p>
+                    </div>
+                </section>                
+                        
+                        <section>
+                            <h2><font color="#135C89">Flood Map (preset sea-level rise: 7m)</font></h2>
 
-                            <p>In addition to oceanic heat, other factors such as changing wind patterns and atmospheric warming can also contribute to the melting of Antarctic ice. Stronger winds can push sea ice away from the coast, exposing ice shelves to warmer waters. Warmer air temperatures can also lead to increased melting of the ice at the surface.</p>
-
-                            <img src="images/more/AntIce.jpg" alt="IPCC SROCC (2019)" width="600" height="500">
-
-                            <p></br>The melting of Antarctic ice is a major concern for scientists and policymakers due to its potential impact on global sea level rise and marine ecosystems. In the upcoming centuries, sea levels would rise by several meters, which would have catastrophic consequences for low-lying areas and coastal cities around the world. On the other hand, current predictions of future sea-level rise include errors of several meters related to the melting process of the Antarctic ice sheet, and more accurate predictions are being discussed as a societal demand.</p>
-
-                            <p>We are working to predict future rates of ice melt with more accuracy and evaluate potential impacts on global sea level rise, ocean overturning circulation, and marine ecosystems.</p>
-
-                            <video width="480" height="270" controls>
-                                <source src="images/movie/grace_monthly_anomaly_ais_black_v2_720p4.mp4" type="video/mp4">
-                            </video>
-                              
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Responsive Iframe</title>
+                            <style>
+                                .iframe-container {
+                                position: relative;
+                                width: 100%;
+                                padding-top: 100%; /* 16:9 aspect ratio (16 / 9 = 0.5625) */
+                                }
+    
+                                .iframe-container iframe {
+                                position: absolute;
+                                top: 0;
+                                left: 100;
+                                width: 100%;
+                                height: 100%;
+                                border: 0;
+                                }
+                            </style>
+                            </head>
+                            <body>
+                            <div class="iframe-container">
+                                <iframe class="responsive-img" src="http://flood.firetree.net/embed.php?w=800&h=600" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            </div>                       
+                        </section>
                         <!-- 
                         images/movie/Circulation of the Southern Ocean-8VMSF28J9H4-720p-1657459192331.mp4
                         images/movie/The cycle of an Argo Float_1080p.mp4
