@@ -179,14 +179,16 @@
 					        .tweets-container {
 					            display: flex;
 					            flex-wrap: wrap;
-					            gap: 20px; /* ツイート間の余白 */
+					            gap: 20px;
 					            justify-content: space-between;
+					            max-width: 800px; /* ここで最大幅を決める */
+					            margin: 0 auto;   /* 中央寄せ */
 					        }
 					        .tweets-container blockquote {
-					            width: 48%; /* PCで2列にするために約半分の幅に */
+					            flex: 1 1 48%;
+					            min-width: 320px; /* これで小さすぎる時は1列になるように保険 */
 					            box-sizing: border-box;
 					        }
-					        /* スマホなど狭い画面では1列に */
 					        @media (max-width: 768px) {
 					            .tweets-container blockquote {
 					                width: 100%;
