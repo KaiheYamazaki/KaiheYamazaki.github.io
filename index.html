@@ -176,19 +176,20 @@
 				<section id="tweet">
 				    <h2><font color="#135C89">TWEETS</font></h2>
 					<style>
-					  /* ---------- コンテナ：縦 3 行 × 横 1 列 ---------- */
+					  /* ---------- 縦 3 行 × 横 1 列 ---------- */
 					  .tweets-container {
 					    display: flex;
 					    flex-direction: column;   /* ← 1 カラム縦積み */
-					    gap: 0px;                 /* ← 余白を狭める   */
+					    gap: 0;                   /* ← gap をゼロに     */
 					  }
 					
-					  /* ---------- ラッパー：フォントごと縮小 & 幅を補正 ---------- */
+					  /* ---------- ツイートごとのラッパー ---------- */
 					  .tweet-wrapper {
-					    transform: scale(0.8);          /* ← 20 % 小さく       */
+					    transform: scale(0.85);          /* ← 15 % 縮小           */
 					    transform-origin: top left;
-					    width: calc(100% / 0.8);        /* ← 縮小分を逆補正して横幅を維持 */
-					    max-width: calc(550px / 0.8);   /* ← data‑width 上限も補正        */
+					    width: calc(100% / 0.85);        /* ← 横幅を逆補正で維持   */
+					    max-width: calc(550px / 0.85);   /* ← data‑width 上限も同様 */
+					    margin: 4px 0;                   /* ← 見かけの余白を 4 px に */
 					  }
 					
 					  /* デフォルト余白をリセット（任意） */
@@ -199,7 +200,7 @@
 					
 					<div class="tweets-container">
 					  <div class="tweet-wrapper">
-					    <blockquote class="twitter-tweet" data-width="550" data-conversation="none" data-cards="hidden">
+					    <blockquote class="twitter-tweet" data-width="550" data-conversation="none">
 					      <a href="https://twitter.com/KaiheZak/status/1913019093910954246"></a>
 					    </blockquote>
 					  </div>
