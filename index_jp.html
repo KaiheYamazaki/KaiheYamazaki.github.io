@@ -182,23 +182,22 @@
 					<section id="tweet">
 					    <h2><font color="#135C89">TWEETS</font></h2>
 						<style>
-						  /* ---------- 縦 3 行 × 横 1 列 ---------- */
+						  /* ---------- 2 カラム横並び ---------- */
 						  .tweets-container {
 						    display: flex;
-						    flex-direction: column;   /* ← 1 カラム縦積み */
-						    gap: 0;                   /* ← gap をゼロに     */
+						    flex-wrap: nowrap;   /* 折り返さない＝1 行 */
+						    gap: 3px;            /* 縮小前の隙間：3px */
 						  }
 						
-						  /* ---------- ツイートごとのラッパー ---------- */
+						  /* ---------- ツイート縮小ラッパー ---------- */
 						  .tweet-wrapper {
-						    transform: scale(0.85);          /* ← 15 % 縮小           */
+						    transform: scale(0.8);      /* ← 20 % 小さく */
 						    transform-origin: top left;
-						    width: calc(100% / 0.85);        /* ← 横幅を逆補正で維持   */
-						    max-width: calc(550px / 0.85);   /* ← data‑width 上限も同様 */
-						    margin: 4px 0;                   /* ← 見かけの余白を 4 px に */
+						    width: calc(50% / 0.8);     /* ← 縮小後に 50% になる逆補正 */
+						    max-width: calc(550px / 0.8);
 						  }
 						
-						  /* デフォルト余白をリセット（任意） */
+						  /* 元から入る余白を除去（任意） */
 						  .tweet-wrapper blockquote.twitter-tweet {
 						    margin: 0;
 						  }
@@ -212,19 +211,21 @@
 						  </div>
 						
 						  <div class="tweet-wrapper">
-						    <blockquote class="twitter-tweet" data-width="550" data-conversation="none" data-cards="hidden">
+						    <blockquote class="twitter-tweet" data-width="550" data-conversation="none">
 						      <a href="https://twitter.com/KaiheZak/status/1874656852820316563"></a>
 						    </blockquote>
 						  </div>
 						
+						  <!-- 必要なら 3 つ目以降を使う。2 列超は折返さないので非表示推奨
 						  <div class="tweet-wrapper">
 						    <blockquote class="twitter-tweet" data-width="550" data-conversation="none" data-cards="hidden">
 						      <a href="https://twitter.com/KaiheZak/status/1877595980121649652"></a>
 						    </blockquote>
 						  </div>
+						  -->
 						</div>
-
-					    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</section>
 
 
