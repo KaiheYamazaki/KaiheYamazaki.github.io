@@ -182,22 +182,23 @@
 					<section id="tweet">
 					    <h2><font color="#135C89">TWEETS</font></h2>
 						<style>
-						  /* ---------- 2 カラム横並び ---------- */
+						  /* ---------- 3 カラム横並び ---------- */
 						  .tweets-container {
 						    display: flex;
-						    flex-wrap: nowrap;   /* 折り返さない＝1 行 */
-						    gap: 3px;            /* 縮小前の隙間：3px */
+						    flex-wrap: nowrap;   /* 折り返さず 1 行 */
+						    gap: 1px;            /* 縮小前の隙間＝3px → 見かけは ~2.4px */
 						  }
 						
 						  /* ---------- ツイート縮小ラッパー ---------- */
+						  /* scale(0.8) で 80 % 表示。逆補正して “縮小後” 幅を 1/3 に */
 						  .tweet-wrapper {
-						    transform: scale(0.8);      /* ← 20 % 小さく */
+						    transform: scale(0.8);            /* ← 文字も含め 20 % 小さく */
 						    transform-origin: top left;
-						    width: calc(50% / 0.8);     /* ← 縮小後に 50% になる逆補正 */
-						    max-width: calc(550px / 0.8);
+						    width: calc((100% / 3) / 0.8);    /* ← 33.33% を逆補正          */
+						    max-width: calc(550px / 0.8);     /* ← data-width の上限を補正   */
 						  }
 						
-						  /* 元から入る余白を除去（任意） */
+						  /* デフォルト余白を除去（任意） */
 						  .tweet-wrapper blockquote.twitter-tweet {
 						    margin: 0;
 						  }
@@ -216,13 +217,11 @@
 						    </blockquote>
 						  </div>
 						
-						  <!-- 必要なら 3 つ目以降を使う。2 列超は折返さないので非表示推奨
 						  <div class="tweet-wrapper">
-						    <blockquote class="twitter-tweet" data-width="550" data-conversation="none" data-cards="hidden">
+						    <blockquote class="twitter-tweet" data-width="550" data-conversation="none">
 						      <a href="https://twitter.com/KaiheZak/status/1877595980121649652"></a>
 						    </blockquote>
 						  </div>
-						  -->
 						</div>
 						
 						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
