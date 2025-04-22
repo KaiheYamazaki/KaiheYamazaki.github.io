@@ -180,7 +180,7 @@
 					  .tweets-container {
 					    display: flex;
 					    flex-wrap: nowrap;   /* 折り返さず 1 行 */
-					    gap: 1px;            /* 縮小前の隙間＝3px → 見かけは ~2.4px */
+					    gap: 3px;            /* 縮小前の隙間＝3px → 見かけは ~2.4px */
 					  }
 					
 					  /* ---------- ツイート縮小ラッパー ---------- */
@@ -188,7 +188,7 @@
 					  .tweet-wrapper {
 					    transform: scale(0.95);            /* ← 文字も含め 20 % 小さく */
 					    transform-origin: top left;
-					    width: calc((100% / 3) / 0.95);    /* ← 33.33% を逆補正          */
+					    width: calc((100% / 2) / 0.95);    /* ← 33.33% を逆補正          */
 					    max-width: calc(550px / 0.95);     /* ← data-width の上限を補正   */
 					  }
 					
@@ -199,11 +199,11 @@
 					</style>
 					
 					<div class="tweets-container">
-					  <div class="tweet-wrapper">
+<!-- 					  <div class="tweet-wrapper">
 					    <blockquote class="twitter-tweet" data-width="550" data-conversation="none">
 					      <a href="https://twitter.com/KaiheZak/status/1913019093910954246"></a>
 					    </blockquote>
-					  </div>
+					  </div> -->
 					
 					  <div class="tweet-wrapper">
 					    <blockquote class="twitter-tweet" data-width="550" data-conversation="none">
