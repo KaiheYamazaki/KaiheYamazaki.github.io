@@ -176,22 +176,22 @@
 				<section id="tweet">
 				    <h2><font color="#135C89">TWEETS</font></h2>
 					<style>
-					  /* ---------- コンテナ ---------- */
+					  /* ---------- コンテナ：縦 3 行 × 横 1 列 ---------- */
 					  .tweets-container {
 					    display: flex;
-					    flex-direction: column;   /* ← 1 カラム縦積み */
-					    gap: 8px;                 /* ← 余白を狭く      */
+					    flex-direction: column;   /* ← 1 カラム縦積み */
+					    gap: 8px;                 /* ← 余白を狭める   */
 					  }
 					
-					  /* ---------- 縮小ラッパー ---------- */
-					  /* 今回は横幅を広げたいので scale=1 に戻す。
-					     もし 0.9 倍などに調整したい場合は transform を付ける */
+					  /* ---------- ラッパー：フォントごと縮小 & 幅を補正 ---------- */
 					  .tweet-wrapper {
-					    width: 100%;              /* ← 親要素いっぱいに広げる */
-					    max-width: 550px;         /* 550px が data-width の上限 */
+					    transform: scale(0.8);          /* ← 20 % 小さく       */
+					    transform-origin: top left;
+					    width: calc(100% / 0.8);        /* ← 縮小分を逆補正して横幅を維持 */
+					    max-width: calc(550px / 0.8);   /* ← data‑width 上限も補正        */
 					  }
 					
-					  /* 埋め込み直後に入るデフォルト余白を除去（任意） */
+					  /* デフォルト余白をリセット（任意） */
 					  .tweet-wrapper blockquote.twitter-tweet {
 					    margin: 0;
 					  }
@@ -199,7 +199,7 @@
 					
 					<div class="tweets-container">
 					  <div class="tweet-wrapper">
-					    <blockquote class="twitter-tweet" data-width="550" data-conversation="none">
+					    <blockquote class="twitter-tweet" data-width="550" data-conversation="none" data-cards="hidden">
 					      <a href="https://twitter.com/KaiheZak/status/1913019093910954246"></a>
 					    </blockquote>
 					  </div>
